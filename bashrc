@@ -5,6 +5,14 @@ export EDITOR
 
 export GREP_COLOR="1;33"
 
+# source Darwin specific config
+kernel_version=$( uname -s )
+if [[ $kernel_version =~ 'Darwin' ]]; then
+		if [ -f ~/.bash_mac -o -h ~/.bash_mac ]; then
+				. ~/.bash_mac
+		fi
+fi
+
 export LANG=en_US.UTF-8
 #export LANG=de_DE.UTF-8
 
