@@ -48,8 +48,9 @@ alias diff='colordiff'
 alias grep='grep --color=auto'
 alias gcc='gcc -g -Wall'
 
-# PS1="\[\e[0m\e[38;5;215m\]\t \[\e[1m\e[38;5;160m\]\W\[\e[0m\e[38;5;215m\] \! \[\e[38;5;255m\]$ "
-PS1="[\u \W]\$ "
+# Pretty sane, but generic cursor color, if there are problems, us the simplerversion instead
+# PS1="[\u \W]\$ "
+PS1="\[\e[0m\e[38;5;215m\]\t \[\e[1m\e[38;5;74m\]\W\[\e[0m\e[38;5;215m\] \! \[\e[38;5;255m\]$ "
 
 #Gets the coveted history-search-backward
 bind '"\e[A":history-search-backward'
