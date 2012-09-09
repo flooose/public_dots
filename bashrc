@@ -69,6 +69,7 @@ alias work='work_mode && VBoxManage startvm ubuntu10.4'
 #alias sss='ssh $1 -t screen'
 eval `dircolors -b`
 
+# PS1="\[\e[0m\e[38;5;215m\]\t \[\e[1m\e[38;5;160m\]\W\[\e[0m\e[38;5;215m\] \! \[\e[38;5;255m\]$ "
 PS1='[\u@\h \W]\$ '
 
 #Gets the coveted history-search-backward
