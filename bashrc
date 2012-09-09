@@ -1,3 +1,5 @@
+# -*-sh-*-
+
 export PATH=/usr/local/bin:$PATH
 
 EDITOR=/usr/bin/vim
