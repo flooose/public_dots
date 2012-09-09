@@ -1,1 +1,40 @@
-source ~/bin/bash-completion.bash
+c_red="\[\e[1;31m\]"
+c_green="\[\e[1;32m\]"
+c_sgr0="\e[0m"
+
+source /usr/local/git/contrib/completion/git-completion.bash
+
+__ps1_color() {
+		case `__git_ps1 | sed -e "s/[)|( ]//g"` in
+				'(master)' )
+						echo $c_red
+						;;
+				'(production)' )
+						echo $c_green
+						;;
+				* )
+						echo $c_green
+						;;
+		esac
+}
+
+__git_ps() {
+		case `__git_ps1 | sed -e "s/[)|( ]//g"` in
+				'master' )
+						#echo $c_red
+						echo master
+						;;
+				'production' )
+						#echo $c_green
+						echo production
+						;;
+				* )
+						#echo $c_green
+						echo other
+						;;
+		esac
+}
+
+export CLICOLOR=1
+
+PS1='[\u \W$(__git_ps1 " (%s)")]\$ '
