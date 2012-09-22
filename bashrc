@@ -14,7 +14,7 @@ export GREP_COLOR="1;33"
 #export LANG=de_DE.UTF-8
 
 emo(){
-		emacsclient -c $* || emacs $* &
+		emacsclient --alternate-editor="" -c $@
 }
 
 function gitg(){

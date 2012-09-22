@@ -1,8 +1,13 @@
 # -*-sh-*-
 
+alias makepasswd="pwgen"
+
 c_red="\[\e[1;31m\]"
 c_green="\[\e[1;32m\]"
 c_sgr0="\e[0m"
+
+# Make mysql findable
+export PATH=/usr/local/mysql/bin/:$PATH
 
 source /usr/local/git/contrib/completion/git-completion.bash
 
