@@ -1,0 +1,5 @@
+--ignore-dir=.rsync_cache
+
+# a little context
+--before-context=2
+--after-context=2
