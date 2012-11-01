@@ -1,6 +1,27 @@
 # -*-sh-*-
 
-alias makepasswd="pwgen"
+alias makepasswd="pwgen -s 15"
+d() {
+    ssh epic-localvm
+}
+
+retag() {
+    /usr/local/Cellar/ctags/5.8/bin/ctags -Re -h rb,js --exclude .*
+}
+
+vm(){
+    case $1 in
+        'start' )
+            VBoxManage startvm epic_localvm --type headless
+            ;;
+        'stop' )
+            VBoxManage controlvm epic_localvm poweroff
+            ;;
+        * )
+            echo 'Usage vm start|stop'
+            ;;
+    esac
+}
 
 c_red="\[\e[1;31m\]"
 c_green="\[\e[1;32m\]"
@@ -12,37 +33,51 @@ export PATH=/usr/local/mysql/bin/:$PATH
 source /usr/local/git/contrib/completion/git-completion.bash
 
 __ps1_color() {
-		case `__git_ps1 | sed -e "s/[)|( ]//g"` in
-				'(master)' )
-						echo $c_red
-						;;
-				'(production)' )
-						echo $c_green
-						;;
-				* )
-						echo $c_green
-						;;
-		esac
+    case `__git_ps1 | sed -e "s/[)|( ]//g"` in
+        '(master)' )
+            echo $c_red
+            ;;
+        '(production)' )
+            echo $c_green
+            ;;
+        * )
+            echo $c_green
+            ;;
+    esac
 }
 
 __git_ps() {
-		case `__git_ps1 | sed -e "s/[)|( ]//g"` in
-				'master' )
-						#echo $c_red
-						echo master
-						;;
-				'production' )
-						#echo $c_green
-						echo production
-						;;
-				* )
-						#echo $c_green
-						echo other
-						;;
-		esac
+    case `__git_ps1 | sed -e "s/[)|( ]//g"` in
+        'master' )
+            #echo $c_red
+            echo master
+            ;;
+        'production' )
+            #echo $c_green
+            echo production
+            ;;
+        * )
+            #echo $c_green
+            echo other
+            ;;
+    esac
+}
+
+bgcolor() {
+    case $1 in
+        'light' )
+            PS1='\[\e[0m\e[38;5;215m\]\u \[\e[1m\e[38;5;74m\]\W\[\e[1m\e[38;5;160m\]$(__git_ps1 " (%s)") \[\e[0m\e[38;5;215m\]\! \[\e[0;30m\]$ '
+            ;;
+        'dark' )
+            PS1='\[\e[0m\e[38;5;215m\]\u \[\e[1m\e[38;5;74m\]\W\[\e[1m\e[38;5;160m\]$(__git_ps1 " (%s)") \[\e[0m\e[38;5;215m\]\! \[\e[38;5;255m\]$ '
+            ;;
+        * )
+            echo other
+            ;;
+    esac
 }
 
 export CLICOLOR=1
 
-PS1='[\u \W$(__git_ps1 " (%s)")]\$ '
+#PS1='[\u \W$(__git_ps1 " (%s)")]\$ '
 PS1='\[\e[0m\e[38;5;215m\]\u \[\e[1m\e[38;5;74m\]\W\[\e[1m\e[38;5;160m\]$(__git_ps1 " (%s)") \[\e[0m\e[38;5;215m\]\! \[\e[38;5;255m\]$ '
