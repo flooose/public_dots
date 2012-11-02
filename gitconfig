@@ -10,3 +10,8 @@
 	file-view-vpane-position = 645
 [color]
 	ui = true
+[alias]
+	co = checkout
+	st = status
+	unstage = reset HEAD --
+	last = log -1 HEAD
