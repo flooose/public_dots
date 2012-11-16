@@ -6,7 +6,7 @@ d() {
 }
 
 retag() {
-    /usr/local/Cellar/ctags/5.8/bin/ctags -Re -h rb,js --exclude .*
+    /usr/local/Cellar/ctags/5.8/bin/ctags -Re -h rb,js --exclude .* $*
 }
 
 vm(){
