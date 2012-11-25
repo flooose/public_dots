@@ -1,0 +1,17 @@
+[user]
+	email = skeptikos@gmail.com
+	name = christopher flöß
+[giggle]
+	main-window-maximized = true
+	main-window-geometry = 0x0+0+0
+	main-window-view = FileView
+	show-graph = false
+	history-view-vpane-position = 263
+	file-view-vpane-position = 645
+[color]
+	ui = true
+[alias]
+	co = checkout
+	st = status
+	unstage = reset HEAD --
+	last = log -1 HEAD
