@@ -1,3 +1,8 @@
+--type-add
+html=.html.erb,.html.haml,.haml
+--type-add
+css=.sass,.less,.scss
+
 --ignore-dir=.rsync_cache
 
 # a little context
