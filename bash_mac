@@ -17,8 +17,14 @@ vm(){
         'stop' )
             VBoxManage controlvm epic_localvm poweroff
             ;;
+        'restart' )
+            vm stop && vm start
+            ;;
+        'login' )
+            d
+            ;;
         * )
-            echo 'Usage vm start|stop'
+            echo 'Usage vm start|stop|restart|login'
             ;;
     esac
 }
@@ -80,4 +86,4 @@ bgcolor() {
 export CLICOLOR=1
 
 #PS1='[\u \W$(__git_ps1 " (%s)")]\$ '
-PS1='\[\e[0m\e[38;5;215m\]\u \[\e[1m\e[38;5;74m\]\W\[\e[1m\e[38;5;160m\]$(__git_ps1 " (%s)") \[\e[0m\e[38;5;215m\]\! \[\e[38;5;255m\]$ '
+PS1='\[\e[0m\e[38;5;215m\]\u \[\e[1m\e[38;5;74m\]\W\[\e[1m\e[38;5;160m\]$(__git_ps1 " (%s)") \[\e[0m\e[38;5;215m\]\! \[\e[0;30m\]$ '

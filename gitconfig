@@ -1,6 +1,6 @@
 [user]
 	email = skeptikos@gmail.com
-	name = christopher flöß
+	name = christopher floess
 [giggle]
 	main-window-maximized = true
 	main-window-geometry = 0x0+0+0
@@ -8,6 +8,8 @@
 	show-graph = false
 	history-view-vpane-position = 263
 	file-view-vpane-position = 645
+[push]
+  default = upstream
 [color]
 	ui = true
 [alias]
