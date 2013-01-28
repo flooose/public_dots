@@ -1,5 +1,6 @@
 # -*-sh-*-
 
+export TERM=xterm
 export PATH=/usr/local/bin:$PATH
 
 EDITOR=/usr/bin/vim
