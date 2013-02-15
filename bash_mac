@@ -1,9 +1,6 @@
 # -*-sh-*-
 
 alias makepasswd="pwgen -s 15"
-d() {
-    ssh epic-localvm
-}
 
 retag() {
     /usr/local/Cellar/ctags/5.8/bin/ctags -Re -h rb,js --exclude .* $*
@@ -21,7 +18,7 @@ vm(){
             vm stop && vm start
             ;;
         'login' )
-            d
+            ssh epic-localvm
             ;;
         * )
             echo 'Usage vm start|stop|restart|login'
@@ -35,6 +32,9 @@ c_sgr0="\e[0m"
 
 # Make mysql findable
 export PATH=/usr/local/mysql/bin/:$PATH
+
+# brew install sbins
+export PATH=/usr/local/sbin:$PATH
 
 source /usr/local/git/contrib/completion/git-completion.bash
 
@@ -85,5 +85,5 @@ bgcolor() {
 
 export CLICOLOR=1
 
-#PS1='[\u \W$(__git_ps1 " (%s)")]\$ '
-PS1='\[\e[0m\e[38;5;215m\]\u \[\e[1m\e[38;5;74m\]\W\[\e[1m\e[38;5;160m\]$(__git_ps1 " (%s)") \[\e[0m\e[38;5;215m\]\! \[\e[0;30m\]$ '
+#PS1="\[\e[0m\e[38;5;215m\]\t \[\e[1m\e[38;5;74m\]\W\[\e[0m\e[38;5;215m\] \! \[\e[38;5;255m\]$ "
+PS1='\[\e[0m\e[38;5;215m\]\u \[\e[1m\e[38;5;74m\]\W\[\e[1m\e[38;5;160m\]$(__git_ps1 " (%s)") \[\e[0m\e[38;5;215m\]\! \[\e[0;255m\]$ '
