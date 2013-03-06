@@ -37,7 +37,7 @@ remove_forcefully(){
     rm -rf $*
 }
 
-alias b='bundle'
+alias b='bundle exec'
 alias be='bundle exec'
 alias ll='ls -l'
 alias la='ls -a'
