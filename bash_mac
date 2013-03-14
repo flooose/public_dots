@@ -36,6 +36,9 @@ export PATH=/usr/local/mysql/bin/:$PATH
 # brew install sbins
 export PATH=/usr/local/sbin:$PATH
 
+# Necessary for Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"
+
 source /usr/local/git/contrib/completion/git-completion.bash
 
 __ps1_color() {
