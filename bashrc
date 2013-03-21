@@ -24,7 +24,7 @@ function gitg(){
 
 function p(){
     ccat ~/.password/db.txt.cpt | grep $1
-    read -p "any button to continue: " -N 1
+    builtin read -p "any button to continue: " -n 1
     printf "\033c"
 }
 
