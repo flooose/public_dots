@@ -23,7 +23,9 @@ function gitg(){
 }
 
 function p(){
-		ccat ~/.password/db.txt.cpt | grep $1
+    ccat ~/.password/db.txt.cpt | grep $1
+    builtin read -p "any button to continue: " -n 1
+    printf "\033c"
 }
 
 function padd(){
