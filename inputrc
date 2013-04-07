@@ -1,0 +1,11 @@
+# one-tab file listing?
+set show-all-if-ambiguous on
+
+# Show what needs to be typed next, not what they have in common
+set completion-prefix-display-length 2
+
+# Ignore case has worked well for me on Emacs
+set completion-ignore-case on
+
+Tab: menu-complete
+
