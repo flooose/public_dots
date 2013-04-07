@@ -11,9 +11,6 @@ export EDITOR
 
 export GREP_COLOR="1;33"
 
-#export LANG=en_US.UTF-8
-#export LANG=de_DE.UTF-8
-
 source ~/.dots/public_dots/bash_lib/*
 
 emo(){
