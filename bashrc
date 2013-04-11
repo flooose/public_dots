@@ -8,7 +8,9 @@ export GREP_COLOR="1;33"
 # Check for an interactive session
 [ -z "$PS1" ] && return
 
-source ~/.dots/public_dots/bash_lib/*
+for f in ~/.dots/public_dots/bash_lib/*; do
+  source $f
+done
 
 # Pretty sane, but generic cursor color, if there are problems, us the simplerversion instead
 # PS1="[\u \W]\$ "
