@@ -7,5 +7,7 @@ set completion-prefix-display-length 2
 # Ignore case has worked well for me on Emacs
 set completion-ignore-case on
 
-Tab: menu-complete
+# Silence that damn bell
+set bell-style none
 
+Tab: menu-complete
