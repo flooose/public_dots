@@ -14,7 +14,7 @@ done
 
 # Pretty sane, but generic cursor color, if there are problems, us the simplerversion instead
 # PS1="[\u \W]\$ "
-PS1="\[\e[0m\e[38;5;215m\]\u@\h \[\e[1m\e[38;5;74m\]\W\[\e[0m\e[38;5;215m\] \! \[\e[38;5;255m\]$ "
+PS1="\[\e[0m\e[38;5;215m\]\u@\h \[\e[1m\e[38;5;74m\]\W\[\e[0m\e[38;5;215m\] \! \[\e[38;5;255m\]\e[0m$ "
 
 #Gets the coveted history-search-backward
 bind '"\e[A":history-search-backward'
