@@ -26,67 +26,22 @@ vm(){
     esac
 }
 
-c_red="\[\e[1;31m\]"
-c_green="\[\e[1;32m\]"
-c_sgr0="\e[0m"
-
-# Make mysql findable
-export PATH=/usr/local/mysql/bin/:$PATH
-
 # brew install sbins
 export PATH=/usr/local/sbin:$PATH
 
 # Necessary for Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
+export EDITOR=emacs
 
 source /usr/local/git/contrib/completion/git-completion.bash
 
-__ps1_color() {
-    case `__git_ps1 | sed -e "s/[)|( ]//g"` in
-        '(master)' )
-            echo $c_red
-            ;;
-        '(production)' )
-            echo $c_green
-            ;;
-        * )
-            echo $c_green
-            ;;
-    esac
-}
-
-__git_ps() {
-    case `__git_ps1 | sed -e "s/[)|( ]//g"` in
-        'master' )
-            #echo $c_red
-            echo master
-            ;;
-        'production' )
-            #echo $c_green
-            echo production
-            ;;
-        * )
-            #echo $c_green
-            echo other
-            ;;
-    esac
-}
-
-bgcolor() {
-    case $1 in
-        'light' )
-            PS1='\[\e[0m\e[38;5;215m\]\u \[\e[1m\e[38;5;74m\]\W\[\e[1m\e[38;5;160m\]$(__git_ps1 " (%s)") \[\e[0m\e[38;5;215m\]\! \[\e[0;30m\]$ '
-            ;;
-        'dark' )
-            PS1='\[\e[0m\e[38;5;215m\]\u \[\e[1m\e[38;5;74m\]\W\[\e[1m\e[38;5;160m\]$(__git_ps1 " (%s)") \[\e[0m\e[38;5;215m\]\! \[\e[38;5;255m\]$ '
-            ;;
-        * )
-            echo other
-            ;;
-    esac
-}
+no_color='\[\e[0m\]'
+flooose_brown='\[\033[38;5;215m\]'
+flooose_blue='\[\e[38;5;74m\]'
+flooose_red='\[\e[38;5;160m\]'
+git_prompt='$(__git_ps1 "(%s)")'
 
 export CLICOLOR=1
 
-#PS1="\[\e[0m\e[38;5;215m\]\t \[\e[1m\e[38;5;74m\]\W\[\e[0m\e[38;5;215m\] \! \[\e[38;5;255m\]$ "
-PS1='\[\e[0m\e[38;5;215m\]\u \[\e[1m\e[38;5;74m\]\W\[\e[1m\e[38;5;160m\]$(__git_ps1 " (%s)") \[\e[0m\e[38;5;215m\]\! \[\e[0;255m\]$ '
+# PS1='\[\e[0m\e[38;5;215m\]\u \[\e[1m\e[38;5;74m\]\W\[\e[1m\e[38;5;160m\]$(__git_ps1 " (%s)") \[\e[38;5;215m\]\! \[\e[0m\]\$ '
+PS1="$flooose_brown\u $flooose_blue\W $flooose_red$git_prompt $flooose_brown\!$no_color \$ "
