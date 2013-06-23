@@ -1,5 +1,13 @@
 # -*-sh-*-
 
+function em() {
+    (/usr/bin/emacsclient -c $1 &)
+}
+
+function emn() {
+    /usr/bin/emacsclient -nw $1
+}
+
 function gitg(){
   /usr/bin/gitg $* &
 }
