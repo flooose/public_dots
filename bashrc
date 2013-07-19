@@ -64,3 +64,6 @@ else
     . ~/.bash_linux
   fi
 fi
+
+export PATH="$HOME/.rbenv/bin:$PATH"
+eval "$(rbenv init -)"
