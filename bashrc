@@ -8,7 +8,7 @@ export GREP_COLOR="1;33"
 # Check for an interactive session
 [ -z "$PS1" ] && return
 
-for f in ~/.dots/public_dots/bash_lib/*; do
+for f in ~/.dots/public_dots/bash_lib/scripts_enabled/*; do
   source $f
 done
 
