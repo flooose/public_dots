@@ -53,17 +53,5 @@ if [[ -d ~/.rvm ]]; then
   PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 fi
 
-# source Darwin specific config
-kernel_version=$( uname -s )
-if [[ $kernel_version =~ 'Darwin' ]]; then
-  if [ -f ~/.bash_mac -o -h ~/.bash_mac ]; then
-    . ~/.bash_mac
-  fi
-else
-  if [ -f ~/.bash_linux -o -h ~/.bash_linux ]; then
-    . ~/.bash_linux
-  fi
-fi
-
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
