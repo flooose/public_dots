@@ -12,9 +12,7 @@ function gitg(){
   /usr/bin/gitg $* &
 }
 
-for file in `ls /etc/bash-completion.d/`; do
-  source file
-done
+source /etc/bash_completion
 
 eval `dircolors -b`
 
