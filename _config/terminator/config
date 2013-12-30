@@ -1,0 +1,87 @@
+[global_config]
+  focus = system
+[keybindings]
+  broadcast_group = <Primary><Alt>i
+[profiles]
+  [[default]]
+    palette = "#000000:#cc0000:#4e9a06:#c4a000:#3465a4:#75507b:#06989a:#d3d7cf:#555753:#ef2929:#8ae234:#fce94f:#729fcf:#ad7fa8:#34e2e2:#eeeeec"
+    use_system_font = False
+    scroll_on_output = False
+    font = Meslo LG S 12
+    background_color = "#222222"
+    scrollback_infinite = True
+  [[light]]
+    background_color = "#ffffdd"
+    foreground_color = "#000000"
+[layouts]
+  [[default]]
+    [[[child1]]]
+      type = Terminal
+      parent = window0
+      profile = default
+    [[[window0]]]
+      type = Window
+      parent = ""
+  [[somelayout]]
+    [[[child0]]]
+      position = 0:27
+      type = Window
+      order = 0
+      parent = ""
+      size = 1600, 844
+    [[[child1]]]
+      labels = None, None, None, None
+      type = Notebook
+      order = 0
+      parent = child0
+    [[[child2]]]
+      position = 402
+      type = VPaned
+      order = 0
+      parent = child1
+    [[[child3]]]
+      position = 796
+      type = HPaned
+      order = 0
+      parent = child2
+    [[[child6]]]
+      position = 796
+      type = HPaned
+      order = 1
+      parent = child2
+    [[[terminal11]]]
+      profile = default
+      type = Terminal
+      order = 3
+      parent = child1
+    [[[terminal10]]]
+      profile = default
+      type = Terminal
+      order = 2
+      parent = child1
+    [[[terminal5]]]
+      profile = default
+      type = Terminal
+      order = 1
+      parent = child3
+    [[[terminal4]]]
+      profile = default
+      type = Terminal
+      order = 0
+      parent = child3
+    [[[terminal7]]]
+      profile = default
+      type = Terminal
+      order = 0
+      parent = child6
+    [[[terminal9]]]
+      profile = default
+      type = Terminal
+      order = 1
+      parent = child1
+    [[[terminal8]]]
+      profile = default
+      type = Terminal
+      order = 1
+      parent = child6
+[plugins]
