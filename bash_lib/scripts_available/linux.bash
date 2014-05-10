@@ -12,7 +12,7 @@ function gitg(){
   /usr/bin/gitg $* &
 }
 
-source /etc/bash_completion
+source /usr/share/git/completion/git-prompt.sh
 
 eval `dircolors -b`
 
