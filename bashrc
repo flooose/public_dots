@@ -53,8 +53,5 @@ if [[ -d ~/.rvm ]]; then
   PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 fi
 
-alias m_dec='encfs ~/Projects/mercury_enc ~/Projects/mercury'
-alias m_enc='fusermount -u ~/Projects/mercury'
-
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
