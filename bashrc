@@ -58,3 +58,5 @@ alias m_enc='fusermount -u ~/Projects/mercury'
 
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
+
+export PATH=~/bin:$PATH
