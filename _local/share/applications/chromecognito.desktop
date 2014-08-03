@@ -1,0 +1,6 @@
+[Desktop Entry]
+Name=chromecognito
+Exec=sh -c "chromium --user-data-dir=$(mktemp -d)"
+Icon=chromecognito
+Type=Application
+Categories=GTK;GNOME;Utility;
