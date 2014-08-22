@@ -1,0 +1,5 @@
+[Desktop Entry]
+Name=chrometor
+Exec=sh -c "chromium --user-data-dir=$(mktemp -d) --proxy-server='socks=127.0.0.1:9050'"
+Type=Application
+Categories=GTK;GNOME;Utility;
