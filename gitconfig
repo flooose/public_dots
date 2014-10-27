@@ -8,6 +8,11 @@
 	show-graph = false
 	history-view-vpane-position = 263
 	file-view-vpane-position = 645
+[merge]
+  tool = editor
+[mergetool "editorb"]
+  cmd = $EDITOR \"$BASE\" \"$LOCAL\" \"$REMOTE\" \"$MERGED\"
+  trustExitCode = false
 [push]
   default = upstream
 [color]
