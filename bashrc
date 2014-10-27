@@ -41,7 +41,7 @@ export LESS_TERMCAP_ue=$'\E[0m'
 export LESS_TERMCAP_us=$'\E[01;32m'
 
 # no duplicates in history
-export HISTCONTROL=ignoredups
+export HISTCONTROL=erasedups
 export HISTFILESIZE=10000
 export HISTSIZE=10000
 
