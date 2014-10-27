@@ -13,7 +13,7 @@
 [color]
 	ui = true
 [alias]
-	co = checkout
+  co = checkout
 	st = status
   ci = commit
 	unstage = reset HEAD --
