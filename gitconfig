@@ -18,7 +18,8 @@
 [color]
 	ui = true
 [alias]
-	co = checkout
+  co = checkout
 	st = status
+  ci = commit
 	unstage = reset HEAD --
 	last = log -1 HEAD

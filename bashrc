@@ -41,7 +41,7 @@ export LESS_TERMCAP_ue=$'\E[0m'
 export LESS_TERMCAP_us=$'\E[01;32m'
 
 # no duplicates in history
-export HISTCONTROL=ignoredups
+export HISTCONTROL=erasedups
 export HISTFILESIZE=10000
 export HISTSIZE=10000
 
@@ -53,10 +53,7 @@ if [[ -d ~/.rvm ]]; then
   PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 fi
 
-alias m_dec='encfs ~/Projects/mercury_enc ~/Projects/mercury'
-alias m_enc='fusermount -u ~/Projects/mercury'
-
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
 
-export PATH=~/bin:$PATH
+export PATH=node_modules/.bin:~/bin:$PATH
