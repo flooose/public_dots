@@ -1,11 +1,11 @@
 # -*-sh-*-
 
 function em() {
-    (/usr/bin/emacsclient -c $1 &)
+    (/usr/bin/env emacs $* &)
 }
 
 function emn() {
-    /usr/bin/emacsclient -nw $1
+    /usr/bin/env emacs -nw $*
 }
 
 function gitg(){
