@@ -15,3 +15,5 @@ alias xterm='xterm -u8'
 alias diff='colordiff'
 alias grep='grep --color=auto'
 alias gcc='gcc -g -Wall'
+
+alias open=xdg-open
