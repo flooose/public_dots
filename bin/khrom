@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+OLD_HOME=$HOME
+CHROME_DIR=$(mktemp -d)
+CHROME_CONF=chromium
+
+unset HOME
+
+cd $CHROME_DIR
+
+cp -r $OLD_HOME/Projects/chrome-dir $CHROME_CONF
+
+cd $CHROME_CONF
+echo Starting Chromium in: $CHROME_DIR/$CHROME_CONF
+
+# Start with a sanity check
+google-chrome --user-data-dir=./ https://check.torproject.org

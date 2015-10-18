@@ -1,5 +1,6 @@
 [Desktop Entry]
 Name=chrometor
-Exec=sh -c "HOME=$(mktemp -d) chromium --user-data-dir=$(mktemp -d) --proxy-server='socks=127.0.0.1:9050' http://check.torproject.org"
+Exec=/home/chris/bin/khrom
+#Exec=sh -c "HOME=$(mktemp -d) chromium --user-data-dir=$(mktemp -d) --proxy-server='socks=127.0.0.1:9050' http://check.torproject.org"
 Type=Application
 Categories=GTK;GNOME;Utility;
