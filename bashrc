@@ -47,12 +47,6 @@ export HISTSIZE=10000
 
 shopt -s histappend
 
-# rvm stuff
-if [[ -d ~/.rvm ]]; then
-  [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
-  PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
-fi
-
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
 
