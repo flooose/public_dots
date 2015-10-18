@@ -5,12 +5,14 @@
 [profiles]
   [[default]]
     palette = "#000000:#cc0000:#4e9a06:#c4a000:#3465a4:#75507b:#06989a:#d3d7cf:#555753:#ef2929:#8ae234:#fce94f:#729fcf:#ad7fa8:#34e2e2:#eeeeec"
+    background_image = None
     use_system_font = False
     scroll_on_output = False
     font = Meslo LG S 12
     background_color = "#222222"
     scrollback_infinite = True
   [[light]]
+    background_image = None
     background_color = "#ffffdd"
     foreground_color = "#000000"
 [layouts]
