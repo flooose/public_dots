@@ -16,14 +16,7 @@ done
 # \[\033 is the same as \[\e
 # All escape sequences must be enclosed in "\[\e[" and "]"
 #
-# Pretty sane, but generic cursor color, if there are problems, us the simplerversion instead
-# PS1="[\u \W]\$ "
-#PS1="\[\e[0m\e[38;5;215m\]\u@\h \[\e[1m\e[38;5;74m\]\W\[\e[0m\e[38;5;215m\] \! \[\e[38;5;255m\]\e[0m$ "
-if [ $DISPLAY ]; then
-    PS1="\[\e[38;5;215m\]\u \t \[\e[38;5;74m\]\W\[\e[38;5;215m\]\[\e[1;32m\] \!\[\e[0m\] \[\e[38;5;255m\]\[\e[1m\]\[\e[38;5;160m\]\$(__git_ps1 \"(%s) \")\[\e[0m\]\[\e[1;32m\]\$\[\e[0m\] "
-else
-    PS1='\[\e[35m\]\u \t \[\e[36m\]\W\[\e[35m\] \! \[\e[36m\]\[\e[1;32m\]$\[\e[0m\] '
-fi
+PS1="\[\e[35m\]\t \[\e[36m\]\W\[\e[35m\] \!\[\e[0m\] \[\e[38;5;255m\]\[\e[1m\]\[\e[38;5;160m\]\$(__git_ps1 \"(%s) \")\[\e[36m\]\[\e[1;32m\]\$\[\e[0m\] "
 
 #Gets the coveted history-search-backward
 bind '"\e[A":history-search-backward'
