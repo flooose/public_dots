@@ -44,3 +44,11 @@ export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
 
 export PATH=node_modules/.bin:~/bin:$PATH
+
+alias vim=emacs
+alias vi=emacs
+
+# Setup android development
+export PATH=$PATH:~/android/platform-tools:~/android/tools
+export ANDROID_HOME=~/android
+
