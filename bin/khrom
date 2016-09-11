@@ -13,4 +13,4 @@ cd $CHROME_CONF
 echo Starting Chromium in: $CHROME_DIR/$CHROME_CONF
 
 # Start with a sanity check
-google-chrome --user-data-dir=./ https://check.torproject.org
+chromium --user-data-dir=./ https://check.torproject.org
