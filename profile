@@ -15,3 +15,7 @@ export LANG=en_US.UTF-8
 # Makes skype detect webcam properly
 #export LD_PRELOAD=/usr/lib/libv4l/v4l1compat.so
 export GTK2_RC_FILES="$HOME/.gtkrc-2.0"
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="/home/chris/.sdkman"
+[[ -s "/home/chris/.sdkman/bin/sdkman-init.sh" ]] && source "/home/chris/.sdkman/bin/sdkman-init.sh"

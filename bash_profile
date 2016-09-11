@@ -11,3 +11,7 @@ export LANG=en_US.UTF-8
 #export LANG=de_DE.UTF-8
 #export LC_ALL=de_DE.UTF-8
 eval "$(rbenv init -)"
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="/home/chris/.sdkman"
+[[ -s "/home/chris/.sdkman/bin/sdkman-init.sh" ]] && source "/home/chris/.sdkman/bin/sdkman-init.sh"
