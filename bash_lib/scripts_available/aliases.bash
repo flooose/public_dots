@@ -12,7 +12,6 @@ alias vi='vim'
 alias gitg='gitg &'
 alias giv='gvim -p'
 alias xterm='xterm -u8'
-alias diff='colordiff'
 alias grep='grep --color=auto'
 alias gcc='gcc -g -Wall'
 
