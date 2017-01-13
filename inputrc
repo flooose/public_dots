@@ -11,3 +11,7 @@ set completion-ignore-case on
 set bell-style none
 
 Tab: menu-complete
+
+set input-meta on
+set output-meta on
+set convert-meta off

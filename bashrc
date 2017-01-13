@@ -58,3 +58,6 @@ export NVM_DIR="/home/chris/.nvm"
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="/home/chris/.sdkman"
 [[ -s "/home/chris/.sdkman/bin/sdkman-init.sh" ]] && source "/home/chris/.sdkman/bin/sdkman-init.sh"
+
+# Make less display utf-8 characters. This assumes that LANG and co. are properly set
+export LESSCHARSET=UTF-8
