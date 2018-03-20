@@ -16,3 +16,5 @@ alias grep='grep --color=auto'
 alias gcc='gcc -g -Wall'
 
 alias open=xdg-open
+
+alias dk=docker-compose
