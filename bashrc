@@ -1,6 +1,6 @@
 # -*-sh-*-
 
-export TERM=xterm-256color
+export TERM=xterm
 export EDITOR=emacs
 export GREP_COLOR="1;33"
 
