@@ -16,7 +16,7 @@ source /usr/share/git/completion/git-prompt.sh
 
 eval `dircolors -b`
 
-export TERM=xterm-256color
+export TERM=xterm
 
 LS_OPTIONS="--color=auto"
 alias ls="ls ${LS_OPTIONS}"
