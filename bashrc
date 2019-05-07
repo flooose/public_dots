@@ -61,3 +61,6 @@ export SDKMAN_DIR="/home/chris/.sdkman"
 
 # Make less display utf-8 characters. This assumes that LANG and co. are properly set
 export LESSCHARSET=UTF-8
+
+# Avoid having to call `jobs` every time you want to kill a background job
+jkill() { PID=`jobs -p $1`; kill $PID; }
