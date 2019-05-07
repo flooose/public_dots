@@ -18,3 +18,6 @@ alias gcc='gcc -g -Wall'
 alias open=xdg-open
 
 alias dk=docker-compose
+
+alias sctl=systemctl
+alias jctl=journalctl
